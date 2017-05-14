@@ -13,28 +13,8 @@ public class PlayerAction {
 		this.inventory = game.inventory;
 	}
 
-	public void move(int direction) {
-		if (direction == 1) {
-			// up
-			if (this.map.getMap(this.player.getY() - 1, this.player.getX()) != 1) {
-				this.player.move(0, -1);
-			}
-		} else if (direction == 2) {
-			// right
-			if (this.map.getMap(this.player.getY(), this.player.getX() + 1) != 1) {
-				this.player.move(1, 0);
-			}
-		} else if (direction == 3) {
-			// down
-			if (this.map.getMap(this.player.getY() + 1, this.player.getX()) != 1) {
-				this.player.move(0, 1);
-			}
-		} else if (direction == 4) {
-			// left
-			if (this.map.getMap(this.player.getY(), this.player.getX() - 1) != 1) {
-				this.player.move(-1, 0);
-			}
-		}
+	public void move(MoveCommand command) {  //Command pattern
+		command.doMove(this.player, this.map);
 	}
 
 	public void pickUpItem() {

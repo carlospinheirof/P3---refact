@@ -23,19 +23,19 @@ public class Control implements KeyListener {
 		// Movement
 		case KeyEvent.VK_UP:
 			// System.out.println("pressed: UP");
-			this.playeraction.move(1);
+			this.playeraction.move(new MoveUp());
 			break;
 		case KeyEvent.VK_RIGHT:
 			// System.out.println("pressed: RIGHT");
-			this.playeraction.move(2);
+			this.playeraction.move(new MoveRight());
 			break;
 		case KeyEvent.VK_DOWN:
 			// System.out.println("pressed: DOWN");
-			this.playeraction.move(3);
+			this.playeraction.move(new MoveDown());
 			break;
 		case KeyEvent.VK_LEFT:
 			// System.out.println("pressed: LEFT");
-			this.playeraction.move(4);
+			this.playeraction.move(new MoveLeft());
 			break;
 		// Spells
 		case KeyEvent.VK_Q:
