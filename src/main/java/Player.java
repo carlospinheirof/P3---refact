@@ -7,6 +7,10 @@ import javax.swing.ImageIcon;
 public class Player {
 	int x, y;
 	private Image player;
+	UpState upstate = new FreeUp();
+	DownState downstate = new FreeDown();
+	RightState rightstate = new FreeRight();
+	LeftState leftstate = new FreeLeft();
 
 	public Player() {
 		this.player = new ImageIcon(this.getClass().getResource(
