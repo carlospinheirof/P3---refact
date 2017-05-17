@@ -56,21 +56,23 @@ public class Control implements KeyListener {
 		case KeyEvent.VK_F:
 			System.out.println("pressed: F - Spell 6");
 			break;
-
+		case KeyEvent.VK_S:
+			this.playeraction.quantityItens();
+			break;	
 		case KeyEvent.VK_X:
-			//System.out.println("pressed: X - Item aufgenommen!");
 			this.playeraction.pickUpItem();
 			break;
 		case KeyEvent.VK_B:
-			//System.out.println("pressed: B - Zeige Inventory");
 			this.playeraction.openInventory();
+			break;
+		case KeyEvent.VK_N:
+			this.playeraction.itensName();
 			break;
 		default:
 			System.out.println("pressed");
 			break;
 		}
 	}
-
 	@Override
 	public void keyTyped(KeyEvent e) {
 		// no code for this function yet.

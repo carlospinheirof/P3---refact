@@ -1,3 +1,3 @@
 # P3---refact
 Projeto final de padrões de projeto:
-Feito -> Command.
+Feito -> Command, State e Visitor.

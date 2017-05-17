@@ -9,6 +9,9 @@ public class Inventory {
 		this.size = 0;
 		this.maxSize = 5;
 	}
+	public void acceptVisitor(InventoryVisitor visitor){
+		visitor.toVisit(start);
+	}
 
 	public void add(int ItemID) {
 
@@ -44,14 +47,5 @@ public class Inventory {
 			return false;
 		}
 
-	}
-
-	public void ausgabe() {
-		InventoryItem z = this.start;
-		System.out.println("Inventory:");
-		while (z != null) {
-			System.out.println(z.ItemID);
-			z = z.next;
-		}
 	}
 }

@@ -31,8 +31,16 @@ public class PlayerAction {
 
 	public void fight() {
 	}
+	
+	public void quantityItens(){
+		this.inventory.acceptVisitor(new GetSizeInvVisitor());	//Visitor pattern
+	}
+	
+	public void itensName(){
+		this.inventory.acceptVisitor(new OpenInNamesVisitor());
+	}
 
 	public void openInventory() {
-		this.inventory.ausgabe();
+		this.inventory.acceptVisitor(new OpenInNumbersVisitor());
 	}
 }

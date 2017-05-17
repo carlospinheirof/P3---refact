@@ -7,7 +7,7 @@ import javax.swing.ImageIcon;
 public class Player {
 	int x, y;
 	private Image player;
-	UpState upstate = new FreeUp();
+	UpState upstate = new FreeUp(); // state pattern
 	DownState downstate = new FreeDown();
 	RightState rightstate = new FreeRight();
 	LeftState leftstate = new FreeLeft();
