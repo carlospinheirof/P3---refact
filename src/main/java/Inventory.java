@@ -1,5 +1,7 @@
 package main.java;
 
+import visitor.InventoryVisitor;
+
 public class Inventory {
 
 	InventoryItem start, ende;

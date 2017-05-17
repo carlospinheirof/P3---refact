@@ -4,13 +4,22 @@ import java.awt.Image;
 
 import javax.swing.ImageIcon;
 
+import state.DownState;
+import state.FreeDown;
+import state.FreeLeft;
+import state.FreeRight;
+import state.FreeUp;
+import state.LeftState;
+import state.RightState;
+import state.UpState;
+
 public class Player {
 	int x, y;
 	private Image player;
-	UpState upstate = new FreeUp(); // state pattern
-	DownState downstate = new FreeDown();
-	RightState rightstate = new FreeRight();
-	LeftState leftstate = new FreeLeft();
+	public UpState upstate = new FreeUp(); // state pattern
+	public DownState downstate = new FreeDown();
+	public RightState rightstate = new FreeRight();
+	public LeftState leftstate = new FreeLeft();
 
 	public Player() {
 		this.player = new ImageIcon(this.getClass().getResource(

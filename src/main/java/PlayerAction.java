@@ -1,5 +1,10 @@
 package main.java;
 
+import command.MoveCommand;
+import visitor.GetSizeInvVisitor;
+import visitor.OpenInNamesVisitor;
+import visitor.OpenInNumbersVisitor;
+
 public class PlayerAction {
 	Player player;
 	Map map;

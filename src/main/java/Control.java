@@ -3,6 +3,11 @@ package main.java;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import command.MoveDown;
+import command.MoveLeft;
+import command.MoveRight;
+import command.MoveUp;
+
 public class Control implements KeyListener {
 	PlayerAction playeraction;
 
